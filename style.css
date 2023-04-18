@@ -1,26 +1,19 @@
 .carrousel {
-  width: 100%;
-  height: 100%;
   position: absolute;
-  left: 0%;
-  top: 0%;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  border: 1px solid #444;
+  background-color: aquamarine;
   transform: scale(0);
   transition: transform 0.5s;
-  background-color: beige;
-}
-@media screen and (min-width: 800px) {
-  .carrousel {
-    width: 50%;
-    height: 50%;
-    left: 25%;
-    top: 25%;
-  }
 }
 
 .carrousel__x {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 5px;
+  right: 5px;
   z-index: 3;
 }
 
@@ -32,7 +25,7 @@
 .carrousel__img {
   position: absolute;
   top: 0;
-  left: 0%;
+  left: 0;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -40,7 +33,11 @@
   transition: opacity 0.5s;
 }
 
-.carrousel--ouvrir {
+.carrousel__img--activer {
+  opacity: 1;
+}
+
+.carrousel--activer {
   transform: scale(1);
 }
 
@@ -54,8 +51,4 @@
 .carrousel__rad {
   display: inline-block;
   margin: 5px;
-}
-
-.carrousel__img--activer {
-  opacity: 1;
 }

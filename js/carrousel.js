@@ -12,6 +12,7 @@
  /* -------------------------------------------------------- Variable de la galerie */
  let galerie = document.querySelector(".galerie")
  let galerie__img = galerie.querySelectorAll("img")
+ galerie__img.length = 5
  // console.log("galerie__img: " + galerie__img.length)
  // console.log(carrousel.tagName)
  /* ------------------------------------------ positionnement de l'image active du carrousel */
@@ -41,15 +42,17 @@
  carrousel__precedent.addEventListener('mousedown', function(){
 
       index--
-      //index--
+
+      if (index == -1) {
+        index = galerie__img.length -1 
+      }
+
       afficher_image(index);
       
-
 })
 
 carrousel__suivant.addEventListener('mousedown', function(){
 
-      console.log(index)
       index++
       
       afficher_image(index);

@@ -40,9 +40,18 @@
  
  carrousel__precedent.addEventListener('mousedown', function(){
 
-      console.log(index)
-      index = index - 1
+      index--
       //index--
+      afficher_image(index);
+      
+
+})
+
+carrousel__suivant.addEventListener('mousedown', function(){
+
+      console.log(index)
+      index++
+      
       afficher_image(index);
 
 })

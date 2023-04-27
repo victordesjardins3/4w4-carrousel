@@ -43,8 +43,10 @@ function genere_boite()
     return '<button class="carrousel__ouvrir">Ouvrir Carrousel</button>
             <div class="carrousel">
                 <button class="carrousel__x">X</button>
+                <button class="carrousel__precedent"><</button>
                 <figure class="carrousel__figure"></figure>
                 <form class="carrousel__form"></form>
             </div>';
 }
 add_shortcode('carrousel', 'genere_boite');
+

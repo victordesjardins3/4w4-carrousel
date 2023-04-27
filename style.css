@@ -60,3 +60,9 @@
   display: inline-block;
   margin: 5px;
 }
+
+.carrousel__precedent {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}

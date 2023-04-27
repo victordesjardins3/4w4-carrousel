@@ -66,3 +66,9 @@
   top: 50%;
   left: 0%;
 }
+
+.carrousel__suivant {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+}

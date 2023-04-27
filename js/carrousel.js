@@ -6,6 +6,8 @@
  let carrousel__x = document.querySelector(".carrousel__x")
  let carrousel__figure = document.querySelector(".carrousel__figure")
  let carrousel__form = document.querySelector(".carrousel__form")
+ let carrousel__precedent = document.querySelector(".carrousel__precedent")
+ let carrousel__suivant = document.querySelector(".carrousel__suivant")
  console.log(carrousel__form.tagName)
  /* -------------------------------------------------------- Variable de la galerie */
  let galerie = document.querySelector(".galerie")
@@ -36,7 +38,14 @@
  
  })
  
- 
+ carrousel__precedent.addEventListener('mousedown', function(){
+
+      console.log(index)
+      index = index - 1
+      //index--
+      afficher_image(index);
+
+})
  
  /** 
   * ajouter_img_dans_carrousel
@@ -56,6 +65,7 @@
  
      creation_img_carrousel(elm)
      creation_radio_carrousel()
+     
    }
  }
  
@@ -103,6 +113,8 @@
    ancien_index = index
  }
  
+
+
  /*
  permet de vérifier si la classe « carrousel--activer » 
  se trouve dans la liste des classe carrousel

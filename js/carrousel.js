@@ -55,6 +55,10 @@ carrousel__suivant.addEventListener('mousedown', function(){
 
       index++
       
+      if (index == 6) {
+        index = galerie__img.length -6 
+      }
+
       afficher_image(index);
 
 })
@@ -71,6 +75,8 @@ carrousel__suivant.addEventListener('mousedown', function(){
      elm.dataset.index = position
      elm.addEventListener('mousedown',function(){
        index = this.dataset.index
+       //function(e)
+       //index = e.target.dataset.index
        afficher_image(index)
        console.log(index)
      })

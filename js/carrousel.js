@@ -51,6 +51,22 @@
       
 })
 
+for (const elm of galerie__img)
+   {
+     elm.dataset.index = position
+     elm.addEventListener('mousedown',function(){
+       index = this.dataset.index
+       //function(e)
+       //index = e.target.dataset.index
+       afficher_image(index)
+       console.log(index)
+     })
+ 
+     creation_img_carrousel(elm)
+     creation_radio_carrousel()
+     
+   }
+
 carrousel__suivant.addEventListener('mousedown', function(){
 
       index++
@@ -67,25 +83,6 @@ carrousel__suivant.addEventListener('mousedown', function(){
   * ajouter_img_dans_carrousel
   * Ajouter l'ensemble des images de la galerie dans la boîte modale carrousel
   */
- function ajouter_img_dans_carrousel()
- {
-   
-   for (const elm of galerie__img)
-   {
-     elm.dataset.index = position
-     elm.addEventListener('mousedown',function(){
-       index = this.dataset.index
-       //function(e)
-       //index = e.target.dataset.index
-       afficher_image(index)
-       console.log(index)
-     })
- 
-     creation_img_carrousel(elm)
-     creation_radio_carrousel()
-     
-   }
- }
  
  function creation_img_carrousel(elm){
        //console.log(elm.getAttribute('src'))

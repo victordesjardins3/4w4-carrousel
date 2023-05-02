@@ -20,18 +20,6 @@
  let ancien_index = -1
  let position = 0 // permet d'indexer les image de la galerie et 
  
- /* ----------------------------------------------------  ouvrir boîte modale */
- bouton.addEventListener('mousedown', function(){
-     console.log('ouvrir la boîte modale')
-     carrousel.classList.add('carrousel--activer')
-     ajouter_img_dans_carrousel()
- 
-     /* https://developer.mozilla.org/en-US/docs/Web/API/Element/classList 
-     
-     propriété clasList.contain('carrousel--activer') permet de vérifier si  le carrousel est ouvert
-     */
- 
- })
  /* ----------------------------------------------------  fermer boîte modale */
  carrousel__x.addEventListener('mousedown', function(){
      console.log('fermer la boîte modale')
@@ -55,6 +43,12 @@ for (const elm of galerie__img)
    {
      elm.dataset.index = position
      elm.addEventListener('mousedown',function(){
+
+      if(carrousel.classList.contains('carrousel--activer') == false)
+      {
+        carrousel.classList.add('carrousel--activer')
+      }
+
        index = this.dataset.index
        //function(e)
        //index = e.target.dataset.index
